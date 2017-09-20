@@ -7,5 +7,4 @@ public class Settings {
 	public static final long DEFAULT_MOVE_INTERVAL = 300;
 	public static final int DEFAULT_GRID_WIDTH = 30;
 	public static final int DEFAULT_GRID_HEIGHT = 16;
-	public static final int DEFAULT_GRID_HEIGHT213 = 16;
 }
