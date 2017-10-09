@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarLayout">
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<include layout="@layout/content_main"-->
+             <!--android:id="@+id/include"/>-->
+
+
+    <!--最上面的按钮栏-->
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/header"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="#FFFFFF" >-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/topBackward"-->
+        <!--android:onClick="backward"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:paddingBottom="5dp"-->
+        <!--android:src="@drawable/backward"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:gravity = "center_vertical"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="16dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:text="September"/>-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/topForward"-->
+        <!--android:src="@drawable/forward"-->
+        <!--android:onClick="forward"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingRight="15dp"-->
+        <!--android:gravity="end"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentRight="true"/>"-->
+    <!--</RelativeLayout>-->
+    <!--上部的日期栏-->
+    <CalendarView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+    </CalendarView>
+    <!--下部的公告栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/calendar"
+        android:orientation="vertical"
+        android:layout_above="@+id/grid"
+        android:id="@+id/linearLayout3">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="公告栏|你的ID为659081"
+            android:textSize="15dp"
+            android:gravity=""
+            android:background="#aaaaaa"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@id/grid"
+            android:textSize="15dp"
+            android:text="背单词软件测试"
+            android:textColor="#4ddb9e"
+            android:gravity="center"
+            />
+    </LinearLayout>
+    <!--最下边的按钮栏-->
+    <GridLayout
+        android:id="@+id/grid"
+        android:useDefaultMargins="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:columnCount="4"
+        android:background="#FFFFFF">
+            <ImageView
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:id="@+id/review"
+                android:src="@drawable/review"
+                android:onClick="review"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+            <ImageView
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:id="@+id/select"
+                android:src="@drawable/select"
+                android:onClick="select"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+            <ImageView
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:id="@+id/statistics"
+                android:src="@drawable/statistics"
+                android:onClick="statistics"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+            <ImageView
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:id="@+id/setting"
+                android:src="@drawable/setting"
+                android:onClick="setting"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+    </GridLayout>
+
+    <Button
+        android:id="@+id/centerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/linearLayout3"
+        android:layout_centerHorizontal="true"
+        android:text="有奖签到"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:background="#4ddb9e"/>
+
+
+</RelativeLayout>
+
+
